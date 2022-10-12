@@ -1,0 +1,262 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{examen-1.R}
+\author{Usuario}
+\date{2022-10-12}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={examen-1.R},
+  pdfauthor={Usuario},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#APPT}
+\CommentTok{\#12/10/22}
+\CommentTok{\#Examen 1}
+
+\FunctionTok{library}\NormalTok{(repmis)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'repmis' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{suelo }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"CLASES/examendatosnuevos.csv"}\NormalTok{)}
+\FunctionTok{View}\NormalTok{(suelo)}
+
+\FunctionTok{boxplot}\NormalTok{(suelo}\SpecialCharTok{$}\NormalTok{nem }\SpecialCharTok{\textasciitilde{}}\NormalTok{ suelo}\SpecialCharTok{$}\NormalTok{suelo,}
+        \AttributeTok{xlab =} \StringTok{"Tipos de suelo"}\NormalTok{,}
+        \AttributeTok{ylab =} \StringTok{"Numero de nematodos"}\NormalTok{,}
+        \AttributeTok{col =} \StringTok{"blue"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{examen-1_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tapply}\NormalTok{(suelo}\SpecialCharTok{$}\NormalTok{nem, suelo}\SpecialCharTok{$}\NormalTok{suelo, var)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    S1    S2    S3    S4    S5 
+## 571.7 302.7 285.8 189.3  90.8
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tapply}\NormalTok{(suelo}\SpecialCharTok{$}\NormalTok{nem, suelo}\SpecialCharTok{$}\NormalTok{suelo, mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    S1    S2    S3    S4    S5 
+## 148.8 140.8 130.4 100.4 161.6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#S1    S2    S3    S4    S5 }
+\CommentTok{\#571.7 302.7 285.8 189.3  90.8}
+\CommentTok{\#Cuántas veces es la diferencia entre la varianza más pequeña y la más grande?}
+\FloatTok{571.7}\SpecialCharTok{/}\FloatTok{90.8}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6.296256
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#6.296256}
+
+
+\CommentTok{\#Cuáles serían las hipótesis nula y alternativa?}
+\NormalTok{par.aov }\OtherTok{\textless{}{-}} \FunctionTok{aov}\NormalTok{(suelo}\SpecialCharTok{$}\NormalTok{nem }\SpecialCharTok{\textasciitilde{}}\NormalTok{ suelo}\SpecialCharTok{$}\NormalTok{suelo)}
+\FunctionTok{summary}\NormalTok{(par.aov)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##             Df Sum Sq Mean Sq F value   Pr(>F)    
+## suelo$suelo  4  10701  2675.2   9.287 0.000207 ***
+## Residuals   20   5761   288.1                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Ho= No hay diferencias significativas}
+\CommentTok{\#H1= Si hay diferencias significativas }
+
+\CommentTok{\#Describe los resultados obtenidos indicando cuál es el valor del estadístico de contraste (F), los gradosde libertad del factor, los grados de libertad residuales y el valor de P.}
+\CommentTok{\#Contraste F= 0.000207}
+\CommentTok{\#Grados de libertad del factor= 4}
+\CommentTok{\#Grados de libertad residuales= 20}
+\CommentTok{\#Valor de p= 9.287}
+
+
+
+\CommentTok{\#Si existen diferencias significativas, realiza una prueba de Tukey e indica donde existen diferenciassignificativas.}
+\FunctionTok{TukeyHSD}\NormalTok{(par.aov)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = suelo$nem ~ suelo$suelo)
+## 
+## $`suelo$suelo`
+##        diff         lwr        upr     p adj
+## S2-S1  -8.0 -40.1208794  24.120879 0.9429980
+## S3-S1 -18.4 -50.5208794  13.720879 0.4481002
+## S4-S1 -48.4 -80.5208794 -16.279121 0.0017871
+## S5-S1  12.8 -19.3208794  44.920879 0.7555248
+## S3-S2 -10.4 -42.5208794  21.720879 0.8658492
+## S4-S2 -40.4 -72.5208794  -8.279121 0.0095500
+## S5-S2  20.8 -11.3208794  52.920879 0.3307073
+## S4-S3 -30.0 -62.1208794   2.120879 0.0743745
+## S5-S3  31.2  -0.9208794  63.320879 0.0595156
+## S5-S4  61.2  29.0791206  93.320879 0.0001237
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(}\FunctionTok{TukeyHSD}\NormalTok{(par.aov))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{examen-1_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#S2{-}S1  {-}8.0 {-}40.1208794  24.120879 0.9429980{-} no hay diferencias signficativas}
+\CommentTok{\#S3{-}S1 {-}18.4 {-}50.5208794  13.720879 0.4481002{-} no hay diferencias significativas}
+\CommentTok{\#S4{-}S1 {-}48.4 {-}80.5208794 {-}16.279121 0.0017871{-} si hay diferencias significativas }
+\CommentTok{\#S5{-}S1  12.8 {-}19.3208794  44.920879 0.7555248{-} no hay diferencias significativas}
+\CommentTok{\#S3{-}S2 {-}10.4 {-}42.5208794  21.720879 0.8658492{-} no hay diferencias significativas}
+\CommentTok{\#S4{-}S2 {-}40.4 {-}72.5208794  {-}8.279121 0.0095500{-} si hay diferencias significativas}
+\CommentTok{\#S5{-}S2  20.8 {-}11.3208794  52.920879 0.3307073{-} no hay diferencias significativas}
+\CommentTok{\#S4{-}S3 {-}30.0 {-}62.1208794   2.120879 0.0743745{-} no hay diferencias significativas}
+\CommentTok{\#S5{-}S3  31.2  {-}0.9208794  63.320879 0.0595156{-} no hay diferencias significativas}
+\CommentTok{\#S5{-}S4  61.2  29.0791206  93.320879 0.0001237{-} si hay diferencias significativas }
+
+
+
+\CommentTok{\#Conclusion}
+\CommentTok{\#Algunas de las variables tienen una diferencia significativa. Sin embargo son muy pocas, la mayoria no tiene una diferencia muy grande }
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
